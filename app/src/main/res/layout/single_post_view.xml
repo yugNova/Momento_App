@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                android:id="@+id/postImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/story_1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#E91E63"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Diana"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/postImage"
+                android:id="@+id/postUserName"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sponsored"
+                android:layout_below="@+id/postUserName"
+                android:layout_toEndOf="@+id/postImage"
+                android:id="@+id/postSubTitle"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/more"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="10dp"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- post image-->
+
+    <ImageView
+        android:id="@+id/mainPostImage"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/makeup_product"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/postHeartButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/heart"/>
+        <ImageView
+            android:id="@+id/postCommentButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@id/postHeartButton"
+            android:src="@drawable/chat_bubble"
+            android:layout_marginStart="10dp"/>
+
+
+        <ImageView
+            android:id="@+id/postShareButton"
+            android:layout_toRightOf="@+id/postCommentButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/share"
+            android:layout_marginStart="10dp"/>
+
+        <ImageView
+            android:id="@+id/postSaveButton"
+            android:layout_alignParentRight="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/save_instagram"/>
+
+    </RelativeLayout>
+
+    <!--Like Section-->
+    <TextView
+
+        android:id="@+id/likeTestView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="250 Likes"
+        android:textStyle="bold"
+        android:padding="7dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/postCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Introducing Our Gorgeous... Lipstick Shades!.....Soft, feminine, and oh-so-chic. 🌸💕 This shade whispers elegance—ideal for brunches, networking events, and casual Fridays. 🌟"
+        android:textColor="#292929"/>
+
+    <TextView
+
+        android:id="@+id/commentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View all 25 comments"
+        android:textColor="#5F5F5F"
+        android:padding="5dp"/>
+
+
+
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="#e2e2e2"
+
+        app:layout_constraintBottom_toTopOf="@+id/single_post"/>
+
+</LinearLayout>
+
+
